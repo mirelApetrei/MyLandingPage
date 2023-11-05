@@ -1,4 +1,4 @@
-import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
+ import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -20,6 +20,7 @@ kobweb {
 
 kotlin {
     configAsKobwebApplication("apetrei", includeServer = true)
+    jvmToolchain(11)
 
     sourceSets {
         val commonMain by getting {
