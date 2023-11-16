@@ -29,7 +29,7 @@ fun Header() {
     val breakpoint by rememberBreakpoint() // this is for screen size management
     Row(
         modifier = Modifier
-            .fillMaxWidth(80.percent)
+            .fillMaxWidth(if (breakpoint > Breakpoint.MD) 80.percent else 90.percent)
              .margin(topBottom = 50.px),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically

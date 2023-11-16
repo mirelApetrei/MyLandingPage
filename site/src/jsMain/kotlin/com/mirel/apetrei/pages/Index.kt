@@ -1,7 +1,9 @@
 package com.mirel.apetrei.pages
 
 import androidx.compose.runtime.*
+import com.mirel.apetrei.sections.AboutSection
 import com.mirel.apetrei.sections.MainSection
+import com.mirel.apetrei.sections.ServiceSection
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -20,5 +22,7 @@ fun HomePage() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         MainSection()
+        AboutSection()
+        ServiceSection()
         }
 }
