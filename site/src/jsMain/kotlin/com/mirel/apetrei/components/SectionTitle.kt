@@ -3,7 +3,7 @@ package com.mirel.apetrei.components
 import androidx.compose.runtime.Composable
 import com.mirel.apetrei.models.Section
 import com.mirel.apetrei.models.Theme
-import com.mirel.apetrei.util.Constants .FONT_FAMILY
+import com.mirel.apetrei.util.Constants.FONT_FAMILY
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box

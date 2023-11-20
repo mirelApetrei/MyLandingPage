@@ -1,6 +1,8 @@
 package com.mirel.apetrei.util
 
 object Constants {
+
+    const val WEBSITE = "https://github.com/mirelApetrei"
     const val SECTION_WIDTH = 1920
     const val FONT_FAMILY = "Roboto"
     const val DESCRIPTION_FIRST = "“Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.” by Eric S. Raymond."
@@ -24,6 +26,13 @@ object Constants {
 
 object Res {
     object Icon {
+        const val link = "link_icon.svg"
+        const val user = "user_icon.svg"
+        const val shield = "shield_icon.svg"
+        const val happy = "happy_icon.svg"
+        const val checkmark = "checkmark_icon.svg"
+        const val star = "star_icon.svg"
+
         const val android = "android_icon.svg"
         const val iOS = "apple_icon.svg"
         const val androidStudio = "AndroidStudio_icon.svg"
@@ -34,9 +43,16 @@ object Res {
     }
 
     object  Image {
+        const val SECTION_BACKGROUND = "#767676"
         const val BACKGROUND = "background.svg"
         const val LOGO = "logoSite.svg"
         const val PERSONAL_PHOTO = "personalImage.png"
         const val ABOUT_IMAGE = "aboutImage.png"
+
+        const val portfolio1 = "portfolio1.png"
+        const val portfolio2 = "portfolio2.png"
+        const val portfolio3 = "portfolio30.png"
+        const val portfolio4 = "portfolio41.png"
+        const val portfolio5 = "portfolio51.png"
     }
 }
