@@ -25,7 +25,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun Header() {
+fun Header(onMenuClicked: () -> Unit) {
     val breakpoint by rememberBreakpoint() // this is for screen size management
     Row(
         modifier = Modifier
@@ -34,7 +34,10 @@ fun Header() {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        LeftSide(breakpoint = breakpoint)
+        LeftSide(
+            breakpoint = breakpoint,
+            onMenuClicked = onMenuClicked
+        )
         if (breakpoint > Breakpoint.MD){
             RightSide()
         }
@@ -43,26 +46,26 @@ fun Header() {
 
 
 @Composable
-fun LeftSide(breakpoint: Breakpoint) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        if (breakpoint <= Breakpoint.MD){
+fun LeftSide(
+    breakpoint: Breakpoint,
+    onMenuClicked: () -> Unit
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        if (breakpoint <= Breakpoint.MD) {
             FaBars(
                 modifier = Modifier
-                    .margin(right = 15.px),
+                    .margin(right = 15.px)
+                    .onClick {
+                        onMenuClicked()
+                    },
                 size = IconSize.XL
             )
         }
         Image(
-            modifier = LogoStyle.toModifier()
-                .width(140.px)
-                .height(130.px)
-                .borderRadius(30.px),
+            modifier = LogoStyle.toModifier(),
             src = Res.Image.LOGO,
-            description = "Logo Image",
+            description = "Logo Image"
         )
-
     }
 }
 
@@ -76,7 +79,7 @@ fun RightSide() {
             .padding(all = 20.px),
         horizontalArrangement = Arrangement.End
     ) {
-        Section.values().take(6).forEach { section ->
+        Section.values().forEach { section ->
             Link(
                 modifier = NavigationItemStyle.toModifier()
                     .padding(right = 30.px)

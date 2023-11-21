@@ -30,29 +30,29 @@ enum class Section(
         subtitle = "My Works",
         path = "#portfolio"
     ),
-    Experience(
-        id = "experience",
-        title = "Experience",
-        subtitle = "My Journey",
-        path = "#experience"
-    ),
+//    Experience(
+//        id = "experience",
+//        title = "Experience",
+//        subtitle = "My Journey",
+//        path = "#experience"
+//    ),
     Contact(
         id = "contact",
         title = "Contact",
         subtitle = "Get in Touch",
         path = "#contact"
     ),
-    Testimonials(
-        id = "testimonials",
-        title = "Testimonials",
-        subtitle = "What they say",
-        path = "#testimonials"
-    ),
-    Achievements(
-        id = "achievements",
-        title = "Achievements",
-        subtitle = "My Achievements",
-        path = "#achievements"
-    ),
+//    Testimonials(
+//        id = "testimonials",
+//        title = "Testimonials",
+//        subtitle = "What they say",
+//        path = "#testimonials"
+//    ),
+//    Achievements(
+//        id = "achievements",
+//        title = "Achievements",
+//        subtitle = "My Achievements",
+//        path = "#achievements"
+//    ),
 
 }
