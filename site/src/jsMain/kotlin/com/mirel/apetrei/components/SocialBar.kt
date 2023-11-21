@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import com.mirel.apetrei.styles.SocialLinksStyle
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -15,23 +16,38 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun SocialBar() {
-    Column(
-        modifier = Modifier
-            .margin(right = 25.px)
-            .padding(topBottom = 25.px)
-            .minWidth(40.px)
-            .borderRadius(20.px)
-            .backgroundColor(Colors.White),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        SocialLinks()
+fun SocialBar(row: Boolean = false) {
+    if (row) {
+        Row(
+            modifier = Modifier
+                .margin(top = 25.px)
+                .padding(leftRight = 25.px)
+                .minHeight(40.px)
+                .borderRadius(r = 20.px)
+                .backgroundColor(Colors.White),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            SocialLinks(row = true)
+        }
+    } else {
+        Column(
+            modifier = Modifier
+                .margin(right = 25.px)
+                .padding(topBottom = 25.px)
+                .minWidth(40.px)
+                .borderRadius(r = 20.px)
+                .backgroundColor(Colors.White),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            SocialLinks()
+        }
     }
 }
 
 @Composable
-private fun SocialLinks() {
+private fun SocialLinks(row: Boolean = false) {
     Link(
         path = "https://www.linkedin.com/in/mirel-apetrei-developer/",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB

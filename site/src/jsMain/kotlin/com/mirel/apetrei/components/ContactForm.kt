@@ -2,6 +2,7 @@ package com.mirel.apetrei.components
 
 import androidx.compose.runtime.Composable
 import com.mirel.apetrei.models.Theme
+import com.mirel.apetrei.styles.InputStyle
 import com.mirel.apetrei.styles.MainButtonStyle
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -11,7 +12,6 @@ import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.forms.InputStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.attributes.InputType
@@ -21,7 +21,7 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun ContactForm(breakpoint: Breakpoint) {
     Form(
-        action = "https://formspree.io/f/xbjeydwd",
+        action = "https://formspree.io/f/xrgwvdkk",
         attrs = Modifier
             .attrsModifier {
                 attr("method", "POST")
