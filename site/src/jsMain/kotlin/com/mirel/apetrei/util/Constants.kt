@@ -45,7 +45,7 @@ object Res {
     object  Image {
         const val SECTION_BACKGROUND = "#767676"
         const val BACKGROUND = "background.svg"
-        const val LOGO = "logoSite.svg"
+        const val LOGO = "logo1.png"
         const val PERSONAL_PHOTO = "personalImage.png"
         const val ABOUT_IMAGE = "aboutImage.png"
 

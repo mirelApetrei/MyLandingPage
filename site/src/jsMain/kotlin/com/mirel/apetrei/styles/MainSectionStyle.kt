@@ -46,7 +46,7 @@ val LogoStyle by ComponentStyle {
 
     hover {
         Modifier
-            .transform { rotate((-10).deg) }
+            .transform { rotate((-8).deg) }
     }
 }
 
